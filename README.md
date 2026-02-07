@@ -1,39 +1,60 @@
-# Supermarket Management System
+# 🛒 Supermarket Management System
 
-A comprehensive C# Desktop Application designed to streamline supermarket operations, including inventory management, sales tracking, and user role management (Admin/Cashier).
+> A robust C# Desktop Application for managing supermarket operations, bridging the gap between inventory control and point-of-sale (POS) billing.
 
-## 🚀 Features
+## 🌟 Overview
+This system provides a dual-interface solution for **Admin** and **Cashier** roles. It streamlines daily retail tasks such as stock management, billing, sales reporting, and user administration, ensuring data accuracy and operational efficiency.
 
-* **Authentication:** Secure Login and Registration system for Admins and Cashiers.
-* **Admin Dashboard:** Overview of total sales, total categories, and user management.
-* **Product Management:** Add, update, and track stock levels of supermarket items.
-* **Sales & Billing:** Cashier interface for processing customer orders and generating payments.
-* **Reports:** View total sales history and category-wise performance.
-* **User Management:** Admin capability to add and manage staff accounts.
+## 🚀 Key Features
+
+### 👮 Admin Module
+* **User Management:** Add, update, and manage cashier/admin accounts.
+* **Inventory Control:** Add new products, update prices, and monitor stock levels.
+* **Categories:** Organize products into categories for better sorting.
+* **Sales Reporting:** View total revenue and category-wise sales performance.
+
+### 🧑‍💼 Cashier Module
+* **POS Billing:** Fast and efficient interface for processing customer orders.
+* **Transaction History:** View daily transactions and generated bills.
+* **Receipt Generation:** Automated bill calculation with tax and discounts.
 
 ## 🛠️ Tech Stack
-
 * **Language:** C#
-* **Framework:** .NET (WPF/WinForms)
-* **Database:** SQL Server (assuming standard .NET integration)
-* **UI:** XAML / Windows Forms
+* **Framework:** .NET Framework (WinForms/WPF)
+* **Database:** SQL Server
+* **Tools:** Visual Studio 2022
 
-## 📂 Project Structure
+## 📸 Screenshots
+*(Add your screenshots here later by dragging and dropping them into the GitHub editor)*
+* **Login Screen:** Secure entry point for staff.
+* **Admin Dashboard:** Overview of business performance.
+* **Billing System:** The cashier's main interface.
 
-* `AdminMainForm`: Main hub for administrative tasks.
-* `CashierPaymentForm`: Interface for handling transactions.
-* `AddProductForm`: Module for inventory updates.
-* `TotalSalesForm`: Reporting and analytics module.
+## 🗄️ Database Schema
+The system relies on a relational database including tables for:
+* `UsersTbl` (ID, Name, Password, Phone)
+* `ProductTbl` (ID, Name, Qty, Price, Cat)
+* `CategoryTbl` (ID, Name, Desc)
+* `BillTbl` (ID, Seller, Date, Amount)
 
-## ⚙️ Installation & Setup
+## ⚙️ How to Run Locally
 
-1.  **Clone the Repository:**
+1.  **Clone the Repo:**
     ```bash
-    git clone [https://github.com/YourUsername/SuperMarketManagementSystem.git](https://github.com/YourUsername/SuperMarketManagementSystem.git)
+    git clone [https://github.com/maheladissanayaka/Super-Market-Management-System.git](https://github.com/maheladissanayaka/Super-Market-Management-System.git)
     ```
-2.  **Open in Visual Studio:**
-    Open the `SuperMarketManagementSystem.csproj` or the `.sln` file.
-3.  **Database Configuration:**
-    Ensure your SQL Server connection string in `App.config` or `App.xaml.cs` matches your local environment.
-4.  **Build & Run:**
-    Press `F5` in Visual Studio to compile and launch the application.
+2.  **Database Setup:**
+    * Open SQL Server Management Studio (SSMS).
+    * Run the provided SQL script (if available) or create a database named `smarketdb`.
+    * Update the connection string in `App.config` or `App.xaml.cs`.
+3.  **Build:**
+    * Open the solution in Visual Studio.
+    * Press **F5** to build and run.
+
+## 🔮 Future Improvements
+* [ ] Barcode Scanner integration.
+* [ ] PDF Export for sales reports.
+* [ ] Email notifications for low stock.
+
+---
+**Developed by [Mahela Dissanayaka](https://github.com/maheladissanayaka)**
